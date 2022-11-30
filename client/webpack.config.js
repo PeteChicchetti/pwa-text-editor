@@ -29,7 +29,7 @@ module.exports = () => {
           "name": "JATE Manifest",
           "icons": [
             {
-              "src": "./assets/images/logo.png",
+              "src": "./src/images/logo.png",
               "type": "image/png",
               "sizes": "96x96",
               "purpose": "any maskable"
