@@ -23,6 +23,10 @@ module.exports = () => {
         title: 'jate'
       }),
       new WorkboxWebpackPlugin.GenerateSW(),
+      new InjectManifest({
+        swSrc: './src-sw.js',
+        swDest: 'src-sw.js',
+      }),
       new WebpackPwaManifest({
         // TODO: Create a manifest.json:
           "short_name": "Manifest",
@@ -38,9 +42,9 @@ module.exports = () => {
           "orientation": "portrait",
           "display": "standalone",
           "start_url": "./",
-          // "description": "Keep track of important tasks!",
-          // "background_color": "#7eb4e2",
-          // "theme_color": "#7eb4e2"
+          "description": "Just Another Text Editor!",
+          "background_color": "#7eb4e2",
+          "theme_color": "#7eb4e2"
       }),
     ],
 
