@@ -25,6 +25,22 @@ module.exports = () => {
       new WorkboxWebpackPlugin.GenerateSW(),
       new WebpackPwaManifest({
         // TODO: Create a manifest.json:
+          "short_name": "Manifest",
+          "name": "JATE Manifest",
+          "icons": [
+            {
+              "src": "./assets/images/logo.png",
+              "type": "image/png",
+              "sizes": "96x96",
+              "purpose": "any maskable"
+            },
+          ],
+          "orientation": "portrait",
+          "display": "standalone",
+          "start_url": "./",
+          // "description": "Keep track of important tasks!",
+          // "background_color": "#7eb4e2",
+          // "theme_color": "#7eb4e2"
       }),
     ],
 
