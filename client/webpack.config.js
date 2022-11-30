@@ -42,7 +42,8 @@ module.exports = () => {
           ],
           orientation: "portrait",
           display: "standalone",
-          start_url: "./",
+          start_url: "/",
+          publicPath: "/",
           description: "Takes notes with Javascript syntax highlighting!",
           background_color: "#225ca3",
           theme_color: "#225ca3"
@@ -57,7 +58,7 @@ module.exports = () => {
         },
         {
           test: /\.m?js$/,
-          exclude: /(node_modules|bower_components)/,
+          exclude: /node_modules/,
           use: {
             loader: 'babel-loader',
             options: {
