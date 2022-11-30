@@ -2,7 +2,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const path = require('path');
 const { InjectManifest } = require('workbox-webpack-plugin');
-const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 // TODO: Add and configure workbox plugins for a service worker and manifest file.
 // TODO: Add CSS loaders and babel to webpack.
 
@@ -22,30 +21,31 @@ module.exports = () => {
         template: './index.html',
         title: 'jate'
       }),
-      new WorkboxWebpackPlugin.GenerateSW(),
       new InjectManifest({
         swSrc: './src-sw.js',
         swDest: 'src-sw.js',
       }),
       new WebpackPwaManifest({
         // TODO: Create a manifest.json:
-          "short_name": "J.A.T.E",
-          "name": "Just Another Text Editor",
-          "icons": [
+          fingerprints: false,
+          inject: true,
+          short_name: "J.A.T.E",
+          name: "Just Another Text Editor",
+          icons: [
             {
-              "src": path.resolve("src/images/logo.png"),
-              "type": "image/png",
-              "sizes": "96x96",
-              "purpose": "any maskable",
-              "destination": path.join('assets', 'icons'),
+              src: path.resolve("src/images/logo.png"),
+              type: "image/png",
+              sizes: "96x96",
+              purpose: "any maskable",
+              destination: path.join('assets', 'icons'),
             },
           ],
-          "orientation": "portrait",
-          "display": "standalone",
-          "start_url": "./",
-          "description": "Takes notes with Javascript syntax highlighting!",
-          "background_color": "#225ca3",
-          "theme_color": "#225ca3"
+          orientation: "portrait",
+          display: "standalone",
+          start_url: "./",
+          description: "Takes notes with Javascript syntax highlighting!",
+          background_color: "#225ca3",
+          theme_color: "#225ca3"
       }),
     ],
 
