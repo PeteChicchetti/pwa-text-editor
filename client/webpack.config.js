@@ -33,10 +33,11 @@ module.exports = () => {
           "name": "Just Another Text Editor",
           "icons": [
             {
-              "src": "./src/images/logo.png",
+              "src": path.resolve("src/images/logo.png"),
               "type": "image/png",
               "sizes": "96x96",
-              "purpose": "any maskable"
+              "purpose": "any maskable",
+              "destination": path.join('assets', 'icons'),
             },
           ],
           "orientation": "portrait",
