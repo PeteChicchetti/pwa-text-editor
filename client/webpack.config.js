@@ -22,7 +22,10 @@ module.exports = () => {
         template: './index.html',
         title: 'jate'
       }),
-      new WorkboxWebpackPlugin.GenerateSW()
+      new WorkboxWebpackPlugin.GenerateSW(),
+      new WebpackPwaManifest({
+        // TODO: Create a manifest.json:
+      }),
     ],
 
     module: {
