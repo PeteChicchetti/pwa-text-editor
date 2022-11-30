@@ -29,8 +29,8 @@ module.exports = () => {
       }),
       new WebpackPwaManifest({
         // TODO: Create a manifest.json:
-          "short_name": "Manifest",
-          "name": "JATE Manifest",
+          "short_name": "J.A.T.E",
+          "name": "Just Another Text Editor",
           "icons": [
             {
               "src": "./src/images/logo.png",
@@ -42,9 +42,9 @@ module.exports = () => {
           "orientation": "portrait",
           "display": "standalone",
           "start_url": "./",
-          "description": "Just Another Text Editor!",
-          "background_color": "#7eb4e2",
-          "theme_color": "#7eb4e2"
+          "description": "Takes notes with Javascript syntax highlighting!",
+          "background_color": "#225ca3",
+          "theme_color": "#225ca3"
       }),
     ],
 
