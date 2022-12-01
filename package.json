@@ -1,7 +1,7 @@
 {
-  "name": "JATE",
+  "name": "jate",
   "version": "1.0.0",
-  "description": "",
+  "description": "This app is a single page application that can run both on and offline using an IndexedDB database and can be downloaded to run outside of the browser.",
   "main": "server.js",
   "scripts": {
     "start:dev": "concurrently \"cd client && npm run build\" \"cd server && npm run server\" ",
@@ -21,5 +21,13 @@
   "devDependencies": {
     "concurrently": "^5.2.0",
     "nodemon": "^2.0.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PeteChicchetti/pwa-text-editor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PeteChicchetti/pwa-text-editor/issues"
+  },
+  "homepage": "https://github.com/PeteChicchetti/pwa-text-editor#readme"
 }
