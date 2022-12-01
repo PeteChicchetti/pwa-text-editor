@@ -31,9 +31,10 @@ module.exports = () => {
           inject: true,
           short_name: "J.A.T.E",
           name: "Just Another Text Editor",
+          appleMobileWebAppCapable: true,
           icons: [
             {
-              src: path.resolve("src/images/logo.png"),
+              src: path.resolve("src/images/maskable_icon.png"),
               sizes: [96, 128, 192, 256, 384, 512],
               destination: path.join('assets', 'icons'),
             },
