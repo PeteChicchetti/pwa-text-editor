@@ -3,6 +3,8 @@ This app is a single page application that can run both on and offline using an 
 
 ## Description
 
+![Image of Installed Text Editor](client/src/images/App-screenshot.png)
+
 This application is a simple text editor that stores data in an indexedDB and can be locally installed.
           
 ## Table of Contents
