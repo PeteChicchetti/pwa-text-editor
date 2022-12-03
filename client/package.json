@@ -1,5 +1,5 @@
 {
-  "name": "JATE",
+  "name": "jate",
   "engines": {
     "node": "16.18.0",
     "npm": "8.19.2"
@@ -30,5 +30,8 @@
   "dependencies": {
     "code-mirror-themes": "^1.0.0",
     "idb": "^6.1.2"
-  }
+  },
+  "version": "1.0.0",
+  "main": "src-sw.js",
+  "description": ""
 }

@@ -8,16 +8,13 @@
   },
   "main": "server.js",
   "scripts": {
-    "build": "node node_modules/webpack/bin/webpack.js --display-error-details",
     "start:dev": "concurrently \"cd client && npm run build\" \"cd server && npm run server\" ",
     "start": "npm run build && cd server && node server.js",
     "server": "cd server node server.js --ignore client",
     "build": "cd client && npm run build",
     "install": "cd server && npm i && cd ../client && npm i",
     "client": "cd client && npm start",
-    "heroku-postbuild": "webpack --config webpack.prod.js",
-    "build": "webpack",
-    "build:prod": "webpack --config webpack.prod.js"
+    "heroku-postbuild": "webpack --config webpack.prod.js"
   },
   "keywords": [],
   "author": "",
