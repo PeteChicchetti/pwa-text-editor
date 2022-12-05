@@ -2,19 +2,14 @@
   "name": "jate",
   "version": "1.0.0",
   "description": "This app is a single page application that can run both on and offline using an IndexedDB database and can be downloaded to run outside of the browser.",
-  "engines": {
-    "node": "16.18.0",
-    "npm": "8.19.2"
-  },
   "main": "server.js",
   "scripts": {
-    "start:dev": "concurrently \"cd client && npm run build\" \"cd server && npm run server\" ",
+    "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
     "start": "npm run build && cd server && node server.js",
-    "server": "cd server node server.js --ignore client",
+    "server": "cd server nodemon server.js --ignore client",
     "build": "cd client && npm run build",
     "install": "cd server && npm i && cd ../client && npm i",
-    "client": "cd client && npm start",
-    "heroku-postbuild": "webpack --config webpack.prod.js"
+    "client": "cd client && npm start"
   },
   "keywords": [],
   "author": "",
